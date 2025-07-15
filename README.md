@@ -76,8 +76,6 @@ Here's a glimpse of my GitHub activity and statistics. These are **dynamic** and
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=nandan222001&theme=dark&hide_border=true&card_width=300" alt="GitHub Streak" height="180" />
 </p>
 
-*If the images still don't appear right away, try a hard refresh (Ctrl+Shift+R or Cmd+Shift+R) or check back in a few minutes, as GitHub's caching can sometimes take a moment to update.*
-
 ---
 
 ## 🔗 Let's Connect!
@@ -113,5 +111,177 @@ If you find my projects helpful or interesting, consider supporting me!
     <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="50" width="210" />
   </a>
 </p>
+
+---
+
+# Namaste Frontend System Design — Course Structure
+
+Below is a comprehensive folder and markdown structure for the Namaste Frontend System Design course. Each module is organized as a separate folder, with a `README.md` file inside describing its content. This structure is designed for clarity, scalability, and ease of navigation, following best practices for frontend project organization[5][11].
+
+
+## 📁 Course Root Structure
+
+```plaintext
+namaste-frontend-system-design/
+├── 01-important-guidelines/
+│   └── README.md
+├── 02-networking/
+│   ├── 01-akshay-chirag-experience.md
+│   ├── 02-how-the-web-works.md
+│   ├── 03-communication-protocols.md
+│   ├── 04-rest-apis.md
+│   ├── 05-graphql.md
+│   └── 06-grpc.md
+├── 03-communication/
+│   ├── 01-akshay-chirag-experience.md
+│   ├── 02-overview.md
+│   ├── 03-short-polling.md
+│   ├── 04-long-polling.md
+│   ├── 05-web-sockets.md
+│   ├── 06-server-side-events.md
+│   └── 07-webhooks.md
+├── 04-security/
+│   ├── 01-akshay-chirag-experience.md
+│   ├── 02-overview.md
+│   ├── 03-xss.md
+│   ├── 04-iframe-protection.md
+│   ├── 05-security-headers.md
+│   ├── 06-client-side-security.md
+│   ├── 07-https.md
+│   ├── 08-dependency-security.md
+│   ├── 09-compliance-regulation.md
+│   ├── 10-input-validation-sanitization.md
+│   ├── 11-ssrf.md
+│   ├── 12-ssji.md
+│   ├── 13-feature-policy.md
+│   ├── 14-sri.md
+│   ├── 15-cors.md
+│   └── 16-csrf.md
+├── 05-testing/
+│   ├── 01-akshay-chirag-experience.md
+│   ├── 02-overview.md
+│   ├── 03-unit-integration-testing.md
+│   ├── 04-e2e-automation-testing.md
+│   ├── 05-ab-testing.md
+│   ├── 06-performance-testing.md
+│   ├── 07-tdd-overview.md
+│   ├── 08-security-testing.md
+│   └── 09-bonus-namaste-react-testing.md
+├── 06-performance/
+│   ├── 01-overview.md
+│   ├── 02-importance.md
+│   ├── 03-monitoring.md
+│   ├── 04-tools.md
+│   ├── 05-network-optimization.md
+│   ├── 06-rendering-pattern.md
+│   └── 07-build-optimization.md
+├── 07-database-caching/
+│   ├── 01-akshay-chirag-experience.md
+│   ├── 02-overview.md
+│   ├── 03-local-storage.md
+│   ├── 04-session-storage.md
+│   ├── 05-cookie-storage.md
+│   ├── 06-indexeddb.md
+│   ├── 07-normalization.md
+│   ├── 08-http-caching.md
+│   ├── 09-service-worker-caching.md
+│   ├── 10-api-caching.md
+│   └── 11-state-management.md
+├── 08-logging-monitoring/
+│   ├── 01-akshay-chirag-experience.md
+│   ├── 02-overview.md
+│   ├── 03-telemetry.md
+│   ├── 04-alerting.md
+│   └── 05-fixing.md
+├── 09-accessibility/
+│   ├── 01-overview.md
+│   ├── 02-keyboard-accessibility.md
+│   ├── 03-screen-reader.md
+│   ├── 04-focus-management.md
+│   ├── 05-color-contrast.md
+│   ├── 06-tools.md
+│   └── 07-how-to-fix.md
+├── 10-service-workers/
+│   └── README.md
+├── 11-pwa/
+│   └── README.md
+├── 12-component-design/
+│   ├── 01-overview.md
+│   ├── 02-config-driven-ui.md
+│   ├── 03-shimmer-ui.md
+│   └── 04-routing-protected-routes.md
+├── 13-state-management-libraries/
+│   └── README.md
+├── 14-multi-language-support/
+│   └── README.md
+├── 15-ui-patterns/
+│   ├── 01-infinite-scroll.md
+│   ├── 02-accordion.md
+│   ├── 03-reddit-nested-comments.md
+│   ├── 04-image-slider.md
+│   ├── 05-pagination-part1.md
+│   ├── 06-pagination-part2.md
+│   ├── 07-real-time-updates.md
+│   ├── 08-youtube-live-chat-ui.md
+│   └── 09-autocomplete-search-bar.md
+├── 16-hld/
+│   ├── 01-overview.md
+│   ├── 02-photo-sharing-app.md
+│   ├── 03-ecommerce-app.md
+│   ├── 04-news-media-feed.md
+│   ├── 05-video-streaming.md
+│   ├── 06-music-streaming.md
+│   ├── 07-live-commentary.md
+│   ├── 08-email-client.md
+│   ├── 09-diagram-tools.md
+│   ├── 10-analytics-dashboard.md
+│   ├── 11-google-docs.md
+│   └── 12-google-sheets.md
+├── 17-bonus/
+│   ├── 01-salary-negotiation-masterclass.md
+│   ├── 02-resume-masterclass.md
+│   ├── 03-personal-branding-masterclass.md
+│   └── 04-linkedin-masterclass.md
+├── 18-interview-questions/
+│   ├── 01-security.md
+│   ├── 02-communication-protocol.md
+│   ├── 03-database-caching.md
+│   ├── 04-logging-monitoring.md
+│   └── 05-networking.md
+├── 19-live-qa/
+│   ├── 2025-01-january.md
+│   ├── 2025-02-february.md
+│   ├── 2025-03-march.md
+│   ├── 2025-04-april-security.md
+│   └── 2025-05-may-database-caching.md
+└── README.md
+```
+
+
+## 📄 Example: Module README.md Structure
+
+Each module folder contains a `README.md` with the following template:
+
+
+---
+
+## 🗂️ Additional Folders (Best Practices)
+
+- `assets/` — Images, icons, and other static resources.
+- `components/` — Reusable UI components.
+- `hooks/` — Custom React hooks.
+- `utils/` — Utility functions and helpers.
+- `pages/` — Top-level pages or routes.
+- `routes/` — Route definitions and guards.
+- `tests/` — Unit and integration tests.
+- `config/` — Configuration files (e.g., environment, API endpoints).
+
+---
+
+## 📚 Notes
+
+- Each module is self-contained for easy navigation and maintainability.
+- The structure supports scalability for future modules or topics.
+- Follows modern frontend project organization principles for clarity and collaboration[5][11].
 
 ---
