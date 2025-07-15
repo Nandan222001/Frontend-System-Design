@@ -14,10 +14,10 @@ Networking also plays a key role in the functioning of the internet, which is es
 
 ## Popular Interview Questions
 
-1. **Networking Fundamentasl.
-2. **How The Internet Works .
-3. **Frontend Backend interaction In-depth.
-4. **Rest Concepts.
-5. **Difference between HTTP methods.
-6. **HTTP Header-Based Questions.
-7. **CORS (Cross-Origin Resource Sharing) In-depth.
+1. Networking Fundamentasl.
+2. How The Internet Works .
+3. Frontend Backend interaction In-depth.
+4. Rest Concepts.
+5. Difference between HTTP methods.
+6. HTTP Header-Based Questions.
+7. CORS (Cross-Origin Resource Sharing) In-depth.
