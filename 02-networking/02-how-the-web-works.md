@@ -89,6 +89,7 @@ Mobile Browser <- Cell Tower <- Phone Company <- DNS Server
 ### 🌍 Website Request Flow
 
 Mobile Browser -> Cell Tower -> Phone Company -> Web Server (Site)
+
 Mobile Browser <- Cell Tower <- Phone Company <- Web Server (Response)
 
 ---
@@ -201,6 +202,7 @@ Instead, ISPs deploy **Network Switches** (or similar aggregation points) within
 |                                                 |                                 |
 +-- (Wireless/Wired) -- Devices                   +-- (Wireless/Wired) -- Devices   +-- (Wireless/Wired) -- Devices 
 
+
 **How it works**:
 1.  **ISP Backbone**: The ISP's main internet infrastructure connects to these large-capacity switches via high-speed optical fiber or other robust cables.
 2.  **Local Distribution**: The network switch acts as a local distribution hub. It takes the single, high-bandwidth connection from the ISP and intelligently distributes it to multiple homes or buildings within its vicinity.
@@ -272,28 +274,153 @@ DNS acts like a giant phonebook for the internet. When you type a website name (
                  +---------------------------------+
  
 
- ### 🤝 DNS and the ISP
+---
 
-When you connect to the internet, your device is typically configured to use the DNS servers provided by your ISP by default.
+## 🤝 DNS and the ISP
 
-* **ISP's Role**: Your ISP operates its own DNS resolvers. When you try to access a website, your request first goes to your ISP's DNS server.
-* **Caching**: These DNS servers maintain large caches of resolved domain names and IP addresses. This significantly speeds up subsequent requests for popular websites.
-* **Hierarchical Lookup**: If your ISP's DNS server doesn't have the IP address in its cache, it begins a hierarchical query process, starting with Root DNS servers, then Top-Level Domain (TLD) servers (like `.com`, `.org`), and finally to the authoritative DNS server for that specific domain.
-* **Connection**: This entire process happens seamlessly in milliseconds, allowing your browser to connect to the correct web server and load the website you requested.
+### 🌐 What Happens When You Type a URL?
 
-In essence, DNS is the invisible glue that makes the human-friendly world of domain names work with the machine-friendly world of IP addresses, forming a critical component of how the internet functions.
+You enter:  
+`https://www.google.com`
 
-
-## ✅ Conclusion
-
-- **Client**: Asks for information
-- **Server**: Gives back the information
-- **IP**: Helps identify devices
-- **DNS**: Helps translate names to IPs
-
-This is how the web makes your favorite websites appear when you just type a name into the browser!
+Your browser needs the **IP address** of the website to connect — but it doesn't know it directly. This is where **DNS (Domain Name System)** comes in.
 
 ---
 
-## 📁 Folder Structure for Reference
+### 🧱 DNS Domain Structure
+
+Root Domain: .
+Top Level Domain: .com, .org, .net
+Second Level Domain: google.com, wikipedia.org
+Third Level Domain: www.google.com, en.wikipedia.org
+
+
+🧠 DNS translates human-readable names into machine-usable IP addresses.
+
+---
+
+### 🏢 What Happens at the Server End?
+
+How does **Google serve millions of users** every second?
+
+👉 The answer: **Load Balancing** and **Data Centers**
+
+- Google uses **multiple servers** across the globe
+- Each **Data Center** contains thousands of CPUs and networking hardware
+- Requests are distributed among servers to avoid overload
+
+🖥️ **Diagram - Load Balancing**
+
+User 1 ─┐
+User 2 ─┼──> [Load Balancer] ─> [Server A]
+User 3 ─┘ ├> [Server B]
+└> [Server C]
+
+
+![Load Balancing](https://your-image-link.com/load-balancer.png)
+
+---
+
+### 🌍 How Do You Get a Response From Servers Like Google?
+
+Let’s say Google's server is in **California**, and you are browsing from **India**.
+
+---
+
+### 🛰️ Option 1: Satellite Communication
+
+- Server sends data to a **Satellite**
+- Satellite beams data down to your device
+
+🚫 **Drawbacks**:
+- Satellites are **far away (~36,000 km)** in geostationary orbit
+- **Latency issues** due to distance
+- Susceptible to **weather, atmosphere, and signal interference**
+
+---
+
+### 🌐 Option 2: Fiber Optic Cables (More Practical)
+
+The **internet backbone** relies on:
+- **Fiber Optic Cables** laid under oceans 🌊
+- Data travels at near light speed
+- Used to connect countries and continents
+
+---
+
+### 🌊 Submarine Cables: The Real Backbone
+
+> These are **thick, shielded fiber optic cables** laid on the ocean floor to connect continents.
+
+🌍 Example:
+
+India ───────────────┐
+├── Submarine Cable ──> California (USA)
+China ───────────────┘
+
+
+📶 These cables carry:
+- Billions of Gigabytes per second
+- Video, voice, cloud data, etc.
+
+![Submarine Cable](https://your-image-link.com/submarine-cable.png)
+
+---
+
+## 🏢 How Does ISP Work and Why Some Countries Can't Access Google?
+
+### 💭 You might wonder...
+
+> Why can't some countries like China or Russia access Google or certain websites?
+
+### 🌐 ISP (Internet Service Provider)
+
+- ISPs connect users to the global internet
+- Each country has **regional ISPs**
+- These ISPs connect to **International Gateways**
+
+---
+
+### 🌍 Internet Hierarchy
+
+[Global Fiber Network]
+↓
+[Tier 1 ISP Providers]
+↓
+[National/Regional ISPs]
+↓
+[Local ISPs / Users]
+
+
+### 🚫 Internet Restrictions
+
+Governments can control:
+- What DNS servers are used
+- What websites can be accessed
+- Whether to block IPs or domains
+
+**Result**:  
+Countries like **China** use **The Great Firewall** — a combination of:
+- DNS filtering
+- Deep packet inspection
+- IP blacklisting
+
+---
+
+## 📌 Summary
+
+| Concept              | Description                                                                 |
+|----------------------|-----------------------------------------------------------------------------|
+| DNS                  | Converts human-readable URLs to IP addresses                                |
+| Load Balancer        | Distributes user requests to multiple servers in a data center              |
+| Satellite            | Can transfer data but is slower and weather-dependent                       |
+| Fiber Optic Cables   | Fast, light-speed cables laid under sea (Submarine Cables)                  |
+| Submarine Cables     | Connect countries globally for seamless internet                            |
+| ISP                  | Provides internet access; can be regionally or nationally controlled        |
+| Censorship           | ISPs can block access to certain websites by government order               |
+
+---
+
+
+
 
