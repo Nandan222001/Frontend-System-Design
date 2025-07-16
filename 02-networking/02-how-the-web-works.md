@@ -101,7 +101,7 @@ When you search for a website from your browser or mobile device, your request f
 You can use a LAN cable to connect two laptops directly, allowing them to communicate and share files. For connecting more than two laptops, you can use a network switch, which lets multiple devices connect to each other efficiently.
 
 ---
-# 🔗 Wired and Wireless Connections
+## 🔗 Wired and Wireless Connections
 
 Understanding how the internet reaches our devices involves a fascinating blend of wired and wireless technologies.
 
