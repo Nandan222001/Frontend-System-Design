@@ -129,12 +129,15 @@ Let's consider a practical scenario: connecting a three-floor building to the in
 
 Using a single Wi-Fi router on the ground floor to cover all three floors:
 
+```plaintext
+
 [Internet] -- (Wired) -- [Ground Floor Router]
 |
 +-- (Wireless) -- [1st Floor Devices]
 |
 +-- (Wireless) -- [2nd Floor Devices]
 
+```
 
 **Issues**:
 * **Signal Degradation**: Wi-Fi signals weaken significantly with distance and when passing through floors and walls.
