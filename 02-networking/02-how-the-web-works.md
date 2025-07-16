@@ -290,8 +290,11 @@ Your browser needs the **IP address** of the website to connect — but it doesn
 ### 🧱 DNS Domain Structure
 
 Root Domain: .
+
 Top Level Domain: .com, .org, .net
+
 Second Level Domain: google.com, wikipedia.org
+
 Third Level Domain: www.google.com, en.wikipedia.org
 
 
