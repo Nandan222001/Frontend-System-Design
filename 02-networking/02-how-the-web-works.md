@@ -1,23 +1,118 @@
-# What is Networking?
+# 🌐 Understanding Web
 
-Networking refers to the practice of connecting computers and other devices to share resources, communicate, and exchange data. It involves the use of various technologies and protocols to enable devices to communicate over local area networks (LANs), wide area networks (WANs), and the internet.
-
----
-
-## Importance of Networking
-
-Networking is crucial for modern computing as it allows devices to share resources such as files, printers, and internet connections. It enables communication between users and systems, supports distributed applications, and facilitates collaboration across different locations.
-
-Networking also plays a key role in the functioning of the internet, which is essential for accessing information and services globally. It is fundamental for businesses, enabling remote work, cloud computing, and real-time communication. Networking supports the infrastructure for various applications, from social media to online banking, and is essential for growth and innovation in technology.
+A simple visual and conceptual explanation of how the web works, including the roles of **Client**, **Server**, **IP Address**, **DNS**, and how data flows between devices.
 
 ---
 
-## Popular Interview Questions
+## 📍 Client-Server Model
 
-1. Networking Fundamentasl.
-2. How The Internet Works .
-3. Frontend Backend interaction In-depth.
-4. Rest Concepts.
-5. Difference between HTTP methods.
-6. HTTP Header-Based Questions.
-7. CORS (Cross-Origin Resource Sharing) In-depth.
+    -----------------------                             -----------------------
+    |                     |           Request           |                     |
+    |                     | --------------------------->|                     |      
+    |        Client       |                             |      Server         |  
+    |                     | <---------------------------|                     |
+    |                     |          Response           |                     |
+    |                     |                             |                     |
+    -----------------------                             -----------------------
+
+> 🔄 A **Client** sends a request and the **Server** sends back a response, which may include:
+- HTML
+- CSS
+- JavaScript
+
+---
+
+## 🖥️ What is a Server?
+
+> A **Server** is a computer or system that provides data, resources, or services to clients.
+
+**Examples:**
+- Web Hosting Server (serves websites)
+- Mail Server (handles email)
+- Database Server (stores data)
+
+✅ A typical server response includes:
+- **HTML** (Structure)
+- **CSS** (Design)
+- **JavaScript** (Interactivity)
+
+---
+
+## 🧑‍💻 What is a Client?
+
+> A **Client** is a computer or software that requests resources from a server.
+
+**Examples:**
+- Web Browser (Chrome, Firefox)
+- Mobile App
+- Desktop Software
+
+📱 A client sends HTTP requests to the server and receives data (HTML, CSS, JS) in return.
+
+---
+
+## 🌐 What is an IP Address?
+
+> An **IP address** is a unique numerical label assigned to each device in a network.
+
+- Used to identify and locate devices
+- Format: `192.168.1.1` (IPv4), or longer in IPv6
+
+🧭 Think of it like a postal address for your device.
+
+---
+
+## 🧭 What is DNS (Domain Name System)?
+
+> DNS translates human-readable domain names (like `www.google.com`) into IP addresses (`142.250.67.14`).
+
+### 🔗 Example:
+
+You type: www.google.com
+DNS resolves: 142.250.67.14
+Browser loads: Google homepage
+
+
+🧠 Without DNS, you'd need to remember complex IP addresses.
+
+---
+
+## 📡 Mobile Internet Journey
+
+### 🔁 DNS Flow
+
+Mobile Browser -> Cell Tower -> Phone Company -> DNS Server
+Mobile Browser <- Cell Tower <- Phone Company <- DNS Server
+
+
+![DNS Diagram](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwv9qazoMnaI1ifSCxREah2aGKCMKx5GcxLw&s)
+
+### 🌍 Website Request Flow
+
+Mobile Browser -> Cell Tower -> Phone Company -> Web Server (Site)
+Mobile Browser <- Cell Tower <- Phone Company <- Web Server (Response)
+
+
+![Website Request](data:image/png;base64,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)
+
+---
+
+## 🔎 Summary Flow Diagram
+
+![Client Server Flow](data:image/jpeg;base64,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)
+
+---
+
+## ✅ Conclusion
+
+- **Client**: Asks for information
+- **Server**: Gives back the information
+- **IP**: Helps identify devices
+- **DNS**: Helps translate names to IPs
+
+This is how the web makes your favorite websites appear when you just type a name into the browser!
+
+---
+
+## 📁 Folder Structure for Reference
+
