@@ -193,6 +193,7 @@ It's not feasible for ISPs to run individual optical fiber or LAN cables to ever
 ### 💡 The Role of the Network Switch
 
 Instead, ISPs deploy **Network Switches** (or similar aggregation points) within neighborhoods or societies.
+```plaintext
 
                           [ISP Main Line]
                                  |
@@ -213,7 +214,7 @@ Instead, ISPs deploy **Network Switches** (or similar aggregation points) within
  (Wired / Wireless)      (Wired / Wireless)         (Wired / Wireless)
       Devices                Devices                     Devices
 
-
+```
 **How it works**:
 1.  **ISP Backbone**: The ISP's main internet infrastructure connects to these large-capacity switches via high-speed optical fiber or other robust cables.
 2.  **Local Distribution**: The network switch acts as a local distribution hub. It takes the single, high-bandwidth connection from the ISP and intelligently distributes it to multiple homes or buildings within its vicinity.
@@ -460,7 +461,7 @@ Whenever you search anything on a browser, **a lot happens behind the scenes**. 
   - Intercept network requests and serve cached content or fetch updates.
 
 🔗 Example Service Worker Demo:  
-https://web.dev/static/learn/pwa/service-workers/image/service-worker-developer-5ebe49234dc0f.png
+![Service Worker](https://web.dev/static/learn/pwa/service-workers/image/service-worker-developer-5ebe49234dc0f.png)
 
 ---
 
@@ -512,6 +513,8 @@ https://web.dev/static/learn/pwa/service-workers/image/service-worker-developer-
 
 Let’s say you're in **India** accessing a website hosted in the **USA**:
 
+```plaintext
+
 Your Browser
 ↓
 Local ISP
@@ -525,7 +528,7 @@ US Server (e.g. Google, Amazon)
 Undersea Cable (Back)
 ↓
 Your Device
-
+```
 
 This is **costly** and **slow**. So to improve performance:
 
@@ -565,6 +568,8 @@ Benefits:
 
 ### 🔌 Network Hubs and Routing Flow
 
+```plaintext
+
 [Google / Facebook / Amazon Servers]
 ↓ (Peering)
 [Regional ISP Hub]
@@ -576,3 +581,4 @@ Benefits:
 [Device]
 
 
+```
