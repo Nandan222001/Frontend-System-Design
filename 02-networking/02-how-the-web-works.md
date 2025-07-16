@@ -314,10 +314,10 @@ How does **Google serve millions of users** every second?
 
 🖥️ **Diagram - Load Balancing**
 
-User 1 ─┐
-User 2 ─┼──> [Load Balancer] ─> [Server A]
-User 3 ─┘ ├> [Server B]
-└> [Server C]
+        User 1 ─┐
+                ├──> [ Load Balancer ] ──> [ Server A ]
+        User 2 ─┤                        ├─> [ Server B ]
+        User 3 ─┘                        └─> [ Server C ]
 
 
 ![Load Balancing](https://your-image-link.com/load-balancer.png)
@@ -357,10 +357,9 @@ The **internet backbone** relies on:
 
 🌍 Example:
 
-India ───────────────┐
-├── Submarine Cable ──> California (USA)
-China ───────────────┘
-
+      India ───────────────┐
+                            ├── Submarine Cable ──> California (USA)
+      China ───────────────┘
 
 📶 These cables carry:
 - Billions of Gigabytes per second
@@ -386,14 +385,15 @@ China ───────────────┘
 
 ### 🌍 Internet Hierarchy
 
-[Global Fiber Network]
-↓
-[Tier 1 ISP Providers]
-↓
-[National/Regional ISPs]
-↓
-[Local ISPs / Users]
+ [ Global Fiber Network ]
+            ↓
+ [ Tier 1 ISP Providers ]
+            ↓
+[ National / Regional ISPs ]
+            ↓
+[  Local ISPs / End Users  ]
 
+---
 
 ### 🚫 Internet Restrictions
 
