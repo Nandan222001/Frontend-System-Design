@@ -194,13 +194,24 @@ It's not feasible for ISPs to run individual optical fiber or LAN cables to ever
 
 Instead, ISPs deploy **Network Switches** (or similar aggregation points) within neighborhoods or societies.
 
-[ISP Main Line] -- (Optical Fiber / High-Capacity Cable) -- [Society/Neighborhood Network Switch]
-|
-+-------------------------------------------------+---------------------------------+
-|                                                 |                                 |
-(LAN/Fiber) -- [Home/Building A Router]             (LAN/Fiber) -- [Home/Building B Router]  (LAN/Fiber) -- [Home/Building C Router]
-|                                                 |                                 |
-+-- (Wireless/Wired) -- Devices                   +-- (Wireless/Wired) -- Devices   +-- (Wireless/Wired) -- Devices 
+                          [ISP Main Line]
+                                 |
+                                 |
+            (Optical Fiber / High-Capacity Cable)
+                                 |
+                                 |
+           [Society / Neighborhood Network Switch]
+                                 |
+     -----------------------------------------------------
+     |                         |                         |
+     |                         |                         |
+     |                         |                         |
+[Home / Building A]     [Home / Building B]       [Home / Building C]
+      [Router]               [Router]                   [Router]
+         |                      |                          |
+         |                      |                          |
+ (Wired / Wireless)      (Wired / Wireless)         (Wired / Wireless)
+      Devices                Devices                     Devices
 
 
 **How it works**:
@@ -385,15 +396,15 @@ The **internet backbone** relies on:
 
 ### 🌍 Internet Hierarchy
 
- [ Global Fiber Network ]
-            ↓
- [ Tier 1 ISP Providers ]
-            ↓
+   [ Global Fiber Network ]
+             ↓
+   [ Tier 1 ISP Providers ]
+             ↓
 [ National / Regional ISPs ]
-            ↓
-[  Local ISPs / End Users  ]
-
----
+             ↓
+  [ Local ISPs / End Users ]
+ 
+ 
 
 ### 🚫 Internet Restrictions
 
