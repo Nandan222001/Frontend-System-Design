@@ -193,6 +193,7 @@ It's not feasible for ISPs to run individual optical fiber or LAN cables to ever
 ### 💡 The Role of the Network Switch
 
 Instead, ISPs deploy **Network Switches** (or similar aggregation points) within neighborhoods or societies.
+<div style="font-family: monospace; white-space: pre;">
 
                           [ISP Main Line]
                                  |
@@ -212,6 +213,8 @@ Instead, ISPs deploy **Network Switches** (or similar aggregation points) within
          |                      |                          |
  (Wired / Wireless)      (Wired / Wireless)         (Wired / Wireless)
       Devices                Devices                     Devices
+
+</div>
 
 
 **How it works**:
