@@ -1,6 +1,6 @@
 # 01-important-guidelines
 
-This folder contains essential guidelines and best practices for the **Namaste Frontend System Design** project.
+This folder contains essential guidelines and best practices for the **Frontend & System Design** project.
 
 ## Purpose
 

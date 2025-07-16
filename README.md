@@ -114,7 +114,7 @@ If you find my projects helpful or interesting, consider supporting me!
 
 ---
 
-# Namaste Frontend System Design — Course Structure
+# Frontend System Design — Course Structure
 
 Below is a comprehensive folder and markdown structure for the Namaste Frontend System Design course. Each module is organized as a separate folder, with a `README.md` file inside describing its content. This structure is designed for clarity, scalability, and ease of navigation, following best practices for frontend project organization[5][11].
 
@@ -122,51 +122,47 @@ Below is a comprehensive folder and markdown structure for the Namaste Frontend 
 ## 📁 Course Root Structure
 
 ```plaintext
-namaste-frontend-system-design/
+frontend-system-design/
 ├── 01-important-guidelines/
 │   └── README.md
 ├── 02-networking/
-│   ├── 01-akshay-chirag-experience.md
-│   ├── 02-how-the-web-works.md
-│   ├── 03-communication-protocols.md
-│   ├── 04-rest-apis.md
-│   ├── 05-graphql.md
-│   └── 06-grpc.md
+│   ├── 01-how-the-web-works.md
+│   ├── 02-communication-protocols.md
+│   ├── 03-rest-apis.md
+│   ├── 04-graphql.md
+│   └── 05-grpc.md
 ├── 03-communication/
-│   ├── 01-akshay-chirag-experience.md
-│   ├── 02-overview.md
-│   ├── 03-short-polling.md
-│   ├── 04-long-polling.md
-│   ├── 05-web-sockets.md
-│   ├── 06-server-side-events.md
-│   └── 07-webhooks.md
+│   ├── 01-overview.md
+│   ├── 02-short-polling.md
+│   ├── 03-long-polling.md
+│   ├── 04-web-sockets.md
+│   ├── 05-server-side-events.md
+│   └── 06-webhooks.md
 ├── 04-security/
-│   ├── 01-akshay-chirag-experience.md
-│   ├── 02-overview.md
-│   ├── 03-xss.md
-│   ├── 04-iframe-protection.md
-│   ├── 05-security-headers.md
-│   ├── 06-client-side-security.md
-│   ├── 07-https.md
-│   ├── 08-dependency-security.md
-│   ├── 09-compliance-regulation.md
-│   ├── 10-input-validation-sanitization.md
-│   ├── 11-ssrf.md
-│   ├── 12-ssji.md
-│   ├── 13-feature-policy.md
-│   ├── 14-sri.md
-│   ├── 15-cors.md
-│   └── 16-csrf.md
+│   ├── 01-overview.md
+│   ├── 02-xss.md
+│   ├── 03-iframe-protection.md
+│   ├── 04-security-headers.md
+│   ├── 05-client-side-security.md
+│   ├── 06-https.md
+│   ├── 07-dependency-security.md
+│   ├── 08-compliance-regulation.md
+│   ├── 09-input-validation-sanitization.md
+│   ├── 10-ssrf.md
+│   ├── 11-ssji.md
+│   ├── 12-feature-policy.md
+│   ├── 13-sri.md
+│   ├── 14-cors.md
+│   └── 15-csrf.md
 ├── 05-testing/
-│   ├── 01-akshay-chirag-experience.md
-│   ├── 02-overview.md
-│   ├── 03-unit-integration-testing.md
-│   ├── 04-e2e-automation-testing.md
-│   ├── 05-ab-testing.md
-│   ├── 06-performance-testing.md
-│   ├── 07-tdd-overview.md
-│   ├── 08-security-testing.md
-│   └── 09-bonus-namaste-react-testing.md
+│   ├── 01-overview.md
+│   ├── 02-unit-integration-testing.md
+│   ├── 03-e2e-automation-testing.md
+│   ├── 04-ab-testing.md
+│   ├── 05-performance-testing.md
+│   ├── 06-tdd-overview.md
+│   ├── 07-security-testing.md
+│   └── 08-bonus-namaste-react-testing.md
 ├── 06-performance/
 │   ├── 01-overview.md
 │   ├── 02-importance.md
@@ -176,23 +172,21 @@ namaste-frontend-system-design/
 │   ├── 06-rendering-pattern.md
 │   └── 07-build-optimization.md
 ├── 07-database-caching/
-│   ├── 01-akshay-chirag-experience.md
-│   ├── 02-overview.md
-│   ├── 03-local-storage.md
-│   ├── 04-session-storage.md
-│   ├── 05-cookie-storage.md
-│   ├── 06-indexeddb.md
-│   ├── 07-normalization.md
-│   ├── 08-http-caching.md
-│   ├── 09-service-worker-caching.md
-│   ├── 10-api-caching.md
-│   └── 11-state-management.md
+│   ├── 01-overview.md
+│   ├── 02-local-storage.md
+│   ├── 03-session-storage.md
+│   ├── 04-cookie-storage.md
+│   ├── 05-indexeddb.md
+│   ├── 06-normalization.md
+│   ├── 07-http-caching.md
+│   ├── 08-service-worker-caching.md
+│   ├── 09-api-caching.md
+│   └── 10-state-management.md
 ├── 08-logging-monitoring/
-│   ├── 01-akshay-chirag-experience.md
-│   ├── 02-overview.md
-│   ├── 03-telemetry.md
-│   ├── 04-alerting.md
-│   └── 05-fixing.md
+│   ├── 01-overview.md
+│   ├── 02-telemetry.md
+│   ├── 03-alerting.md
+│   └── 04-fixing.md
 ├── 09-accessibility/
 │   ├── 01-overview.md
 │   ├── 02-keyboard-accessibility.md
@@ -249,12 +243,13 @@ namaste-frontend-system-design/
 │   ├── 04-logging-monitoring.md
 │   └── 05-networking.md
 ├── 19-live-qa/
-│   ├── 2025-01-january.md
-│   ├── 2025-02-february.md
-│   ├── 2025-03-march.md
-│   ├── 2025-04-april-security.md
-│   └── 2025-05-may-database-caching.md
+│   ├── 01-2025-january.md
+│   ├── 02-2025-february.md
+│   ├── 03-2025-march.md
+│   ├── 04-2025-april-security.md
+│   └── 05-2025-may-database-caching.md
 └── README.md
+
 ```
 
 
