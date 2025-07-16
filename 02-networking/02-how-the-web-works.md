@@ -193,7 +193,6 @@ It's not feasible for ISPs to run individual optical fiber or LAN cables to ever
 ### 💡 The Role of the Network Switch
 
 Instead, ISPs deploy **Network Switches** (or similar aggregation points) within neighborhoods or societies.
-<div style="font-family: monospace; white-space: pre;">
 
                           [ISP Main Line]
                                  |
@@ -213,8 +212,6 @@ Instead, ISPs deploy **Network Switches** (or similar aggregation points) within
          |                      |                          |
  (Wired / Wireless)      (Wired / Wireless)         (Wired / Wireless)
       Devices                Devices                     Devices
-
-</div>
 
 
 **How it works**:
@@ -334,7 +331,7 @@ How does **Google serve millions of users** every second?
         User 3 ─┘                        └─> [ Server C ]
 
 
-![Load Balancing](https://your-image-link.com/load-balancer.png)
+![Load Balancing](https://www.veeble.org/kb/wp-content/uploads/2024/01/Untitled-design-2.jpg)
 
 ---
 
@@ -379,7 +376,7 @@ The **internet backbone** relies on:
 - Billions of Gigabytes per second
 - Video, voice, cloud data, etc.
 
-![Submarine Cable](https://your-image-link.com/submarine-cable.png)
+![Submarine Cable](https://www2.telegeography.com/hubfs/2021/Blog%20Assets/Interactive%20Map.png)
 
 ---
 
@@ -399,13 +396,13 @@ The **internet backbone** relies on:
 
 ### 🌍 Internet Hierarchy
 
-   [ Global Fiber Network ]
-             ↓
-   [ Tier 1 ISP Providers ]
-             ↓
-[ National / Regional ISPs ]
-             ↓
-  [ Local ISPs / End Users ]
+    [ Global Fiber Network ]
+                ↓
+    [ Tier 1 ISP Providers ]
+                ↓
+    [ National / Regional ISPs ]
+                ↓
+    [ Local ISPs / End Users ]
  
  
 
