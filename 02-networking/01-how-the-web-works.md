@@ -145,12 +145,15 @@ Using a single Wi-Fi router on the ground floor to cover all three floors:
 
 A more robust solution involves a router on each floor, connected via wired connections to a central point (often the main router or a switch) on the ground floor.
 
+```plaintext
+
 [Internet] -- (Wired) -- [Ground Floor Main Router]
 |
 +-- (Wired) -- [1st Floor Router] -- (Wireless) -- [1st Floor Devices]
 |
 +-- (Wired) -- [2nd Floor Router] -- (Wireless) -- [2nd Floor Devices] 
 
+```
 **Benefits**:
 * **Stable Connection**: Each floor has a dedicated Wi-Fi access point, ensuring strong and stable wireless signals.
 * **Consistent Speed**: Devices on each floor receive optimal speeds due to proximity to their respective routers.
