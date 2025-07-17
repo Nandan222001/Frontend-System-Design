@@ -582,3 +582,42 @@ Benefits:
 
 
 ```
+
+### DOMAIN NAME MAPPING
+
+ICANN (Internet Corporation for Assigned Names and Numbers) manages domain names and IP addresses globally. 
+
+This company ensures that domain names are unique and properly mapped to IP addresses, allowing users to access websites using human-readable names instead of numerical IP addresses.
+
+WHOIS (Whois) is a protocol used to query databases that store registered users or assignees of a domain name or an IP address block. It provides information about the ownership and registration details of a domain.
+
+---
+
+## 📚 Client And Server Things
+
+![Client And Server](https://miro.medium.com/v2/resize:fit:762/0*prUYsFf2NRG0oL7b.png)
+
+- **DNS LOOKUP**: When you type a URL, your browser queries DNS to resolve the domain name to an IP address.
+- **TCP HANDSHAKE**: Establishes a connection between your device and the server.
+- **SSL HANDSHAKE**: If the site uses HTTPS, this secures the connection.
+
+- **HTTP GET REQUEST**: Your browser sends a request to the server for the webpage.
+- **HTTP RESPONSE**: The server sends back the requested HTML, CSS, and JavaScript
+- **RENDERING**: Your browser processes the HTML, applies CSS styles, and executes JavaScript to display the webpage.
+
+At this point, you can interact with the webpage, and any further actions (like clicking links or submitting forms) will repeat the process of sending requests and receiving responses.
+
+---
+
+![Web Page Loading Process](https://miro.medium.com/v2/resize:fit:2000/1*M2PbmrQLfnY39hYpp_0z2w.png)
+
+At The high level , from the time you get a html to the time you see the page, it goes through several steps:
+
+1. **Loading HTML**: The browser fetches the HTML file from the server.
+2. **Scripting**: The browser executes JavaScript code, which may modify the DOM or fetch additional resources.
+3. **Rendering**: The browser renders the page, applying styles and layout.
+4. **Painting**: The browser paints the pixels on the screen, displaying the final webpage.
+
+When You request a page you get the response , we get two things basically CSS & JS . Whenever We say CSS it means it is render blocking and JS is parser blocking . Unless your CSS is loaded the browser will not render the page and unless your JS is loaded the browser will not parse the page . So it is important to load CSS first and then JS . It means that the browser will not render the page until the CSS is loaded and will not parse the page until the JS is loaded. 
+
+Once the CSS and JS are loaded, the DOM (Document Object Model) is constructed, which represents the structure of the webpage. The browser then applies styles from the CSS to the DOM elements and executes any JavaScript code that manipulates the DOM.
