@@ -596,6 +596,103 @@ At The high level , from the time you get a html to the time you see the page, i
 3. **Rendering**: The browser renders the page, applying styles and layout.
 4. **Painting**: The browser paints the pixels on the screen, displaying the final webpage.
 
+
+1. Parsing :- 
+   - The browser parses the HTML to create a DOM (Document Object Model) tree.
+   - It also parses CSS to create a CSSOM (CSS Object Model) tree.
+2. Style Calculation :- 
+    - The browser combines the DOM and CSSOM to create a Render Tree, which represents the visual structure of the page.
+3. Layout :-
+    - The browser calculates the layout of each element in the Render Tree, determining their size and position on the screen.
+4. Painting :-
+    - The browser paints the pixels on the screen based on the Render Tree.
+5. Compositing :- 
+    - The browser may break the page into layers and composite them together to render the final image on the screen.
+
+
 When You request a page you get the response , we get two things basically CSS & JS . Whenever We say CSS it means it is render blocking and JS is parser blocking . Unless your CSS is loaded the browser will not render the page and unless your JS is loaded the browser will not parse the page . So it is important to load CSS first and then JS . It means that the browser will not render the page until the CSS is loaded and will not parse the page until the JS is loaded. 
 
 Once the CSS and JS are loaded, the DOM (Document Object Model) is constructed, which represents the structure of the webpage. The browser then applies styles from the CSS to the DOM elements and executes any JavaScript code that manipulates the DOM.
+
+After this the Parse CSS and Build CSSOM (CSS Object Model) is created, which represents the styles applied to the DOM elements. The browser then combines the DOM and CSSOM to create a Render Tree, which is used to paint the pixels on the screen.
+
+Then it executes the JavaScript code, which may modify the DOM or CSSOM. If the JavaScript modifies the DOM, the browser may need to re-render the page to reflect those changes.
+
+Merge DOM and CSSOM to create the Render Tree, which is a visual representation of the webpage. The browser then paints the pixels on the screen based on the Render Tree.
+
+## Parse of the HTML
+
+![HTML Parsing](https://miro.medium.com/v2/resize:fit:1000/0*9pLLuwe_z4I_1oK5.png)
+
+The browser parses the HTML to create a DOM (Document Object Model) tree. The DOM represents the structure of the webpage, with each element as a node in the tree. The browser reads the HTML from top to bottom, creating nodes for each element and its attributes. It also handles comments and whitespace, which are ignored in the final DOM structure. 
+
+## Fetch External Resources
+![Fetch External Resources](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSfUue9mbrT7AZNLA2HAUo65OadCGA1R48sw&s)
+
+CSS :- Blocks Rendering
+- CSS files are fetched and parsed to apply styles to the DOM.
+- The browser blocks rendering until the CSS is loaded to ensure the page is displayed correctly.
+
+JS :- Blocks Parsing Unless Async
+- JavaScript files are fetched and executed.
+- If the script is synchronous, it blocks further parsing of the HTML until the script is executed.
+- If the script is asynchronous (using `async` or `defer`), it does not block parsing, allowing the browser to continue building the DOM while the script is being fetched. 
+  -Defer :- 
+    - Scripts with the `defer` attribute are executed after the HTML is fully parsed, maintaining the order of scripts.
+  -Async :-
+    - Scripts with the `async` attribute are executed as soon as they are fetched, without waiting for the HTML to be fully parsed. This can lead to scripts executing in a different order than
+    they appear in the HTML.
+
+## Parse CSS and Build CSSOM
+![CSSOM Parsing](https://miro.medium.com/v2/resize:fit:1400/0*1jDCY627rCzimaPo.png)
+
+We have dom and cssom now we have to merge them to create the render tree . The CSSOM (CSS Object Model) is created by parsing the CSS files and applying styles to the DOM elements. The browser reads the CSS rules and creates a tree structure that represents the styles applied to each element in the DOM. 
+
+## Execute JavaScript
+![JavaScript Execution](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzNPTbJZdgrgud0CdxGywxPrafKHBUrjwdrP-iqVMqZzWN1DTUtqo54smOzZDrUDC80PE&usqp=CAU)
+
+Once the CSSOM is created, we do Javascript Execution. The browser executes the JavaScript code, which may modify the DOM or CSSOM. If the JavaScript modifies the DOM, the browser may need to re-render the page to reflect those changes.
+
+When all sync things are loaded we call it as DOMContentLoaded . It means that the HTML is fully loaded and parsed, and the DOM is ready to be manipulated by JavaScript.
+
+When all async things are loaded we call it as Window.load . It means that all external resources (CSS, JavaScript, images, etc.) are fully loaded and the page is ready for interaction.
+
+## Merge DOM and CSSOM to create Render Tree
+![Render Tree Creation](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUDkWpTI9gifc7f0eoIuXnpLTlTnyMuWLo2Op8s_DfB2-iOh1pZn7OD7LtPQzwaAqDvVw&usqp=CAU)
+
+Now we have DOM and CSSOM, we can merge them to create the Render Tree. The Render Tree is a visual representation of the webpage, which includes only the elements that are visible on the screen and their styles. The browser combines the DOM and CSSOM to create the Render Tree, which is used to paint the pixels on the screen. If certain nodes are not visible (like those with `display: none`), they are excluded from the Render Tree. 
+
+## Calculate Layout And Paint Pixels
+![Layout Calculation](https://images.viblo.asia/7fea13cb-dda3-4a30-9416-70a979ad943d.png)
+
+In this step, the browser calculates the layout of each element in the Render Tree, determining their size and position on the screen. This process is known as layout or reflow. The browser takes into account the styles applied to each element, such as margins, padding, and borders, to calculate their final dimensions and positions.
+Once the layout is calculated, the browser paints the pixels on the screen based on the Render Tree. This process is known as painting. The browser converts the visual representation of the webpage into actual pixels that are displayed on the screen.
+
+## Compositing Layers
+
+In this step, the browser may break the page into layers and composite them together to render the final image on the screen. This is done to optimize rendering performance, especially for complex pages with overlapping elements or animations. Each layer is rendered separately, and then they are combined to create the final visual output.
+
+## 📝 Summary Table: How the Web Works
+
+| Concept/Component         | Description                                                                                   | Example/Key Points                                                                                  |
+|--------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| **Client**               | Device/software requesting resources from a server                                            | Web browser, mobile app                                                                            |
+| **Server**               | Provides data/services to clients                                                             | Web server, database server                                                                        |
+| **IP Address**           | Unique identifier for devices on a network                                                    | `192.168.1.1`, `2607:f8b0:4005:805::200e`                                                          |
+| **DNS**                  | Translates domain names to IP addresses                                                       | `google.com` → `142.250.67.14`                                                                     |
+| **ISP**                  | Connects users to the internet                                                               | Airtel, Jio, Comcast                                                                               |
+| **Network Switch**       | Distributes internet to multiple homes/buildings                                              | Society/Neighborhood switch                                                                        |
+| **Wired Connection**     | Uses cables (Ethernet/fiber) for connectivity                                                 | Stable, fast, less flexible                                                                        |
+| **Wireless Connection**  | Uses Wi-Fi for connectivity                                                                  | Flexible, can have interference                                                                    |
+| **Load Balancer**        | Distributes requests among multiple servers                                                   | Google’s data centers                                                                              |
+| **Submarine Cable**      | Undersea fiber optic cables connecting continents                                             | India ↔ USA internet traffic                                                                       |
+| **Caching**              | Stores resources locally to speed up future requests                                          | Browser cache, service workers                                                                     |
+| **TCP Protocol**         | Ensures reliable, ordered delivery of data packets                                            | Retransmits lost packets                                                                           |
+| **Peering**              | Direct traffic exchange between ISPs/companies                                                | Faster, lower latency                                                                              |
+| **Domain Name Mapping**  | Managed by ICANN, ensures unique domain-to-IP mapping                                         | WHOIS for ownership info                                                                           |
+| **Web Page Loading**     | Steps from request to rendering: DNS lookup, TCP/SSL handshake, HTTP request/response, render | DOM, CSSOM, Render Tree, Layout, Paint, Compositing                                                |
+| **Resource Fetching**    | CSS blocks rendering, JS can block parsing unless async/defer                                | `defer`/`async` attributes for scripts                                                             |
+| **Rendering Pipeline**   | Parsing HTML/CSS, building DOM/CSSOM, merging to Render Tree, layout, paint, compositing      | DOMContentLoaded, Window.load events                                                               |
+| **Internet Restrictions**| Governments can block/limit access via DNS/IP filtering                                      | The Great Firewall of China                                                                        |
+
+> This table summarizes the key concepts, components, and processes involved in how the web and internet work, from client-server communication to rendering a web page in your browser.
