@@ -102,34 +102,6 @@ When you search for a website from your browser or mobile device, your request f
 You can use a LAN cable to connect two laptops directly, allowing them to communicate and share files. For connecting more than two laptops, you can use a network switch, which lets multiple devices connect to each other efficiently.
 
 ---
-## 🔗 Wired and Wireless Connections
-
-Understanding how the internet reaches our devices involves a fascinating blend of wired and wireless technologies.
-
-## 📡 The Basics: Wired vs. Wireless
-
-* **Wired Connections ⚡️**: These rely on physical cables, primarily Ethernet, to connect devices directly or through network switches.
-    * **Pros**: Generally offer superior speed, stability, and security. Less susceptible to interference.
-    * **Cons**: Less flexible, requires physical cabling, can be unsightly if not managed well.
-
-* **Wireless Connections 📶**: These utilize Wi-Fi to connect devices without physical cables.
-    * **Pros**: Provides flexibility and mobility, allowing devices to connect from various locations within range.
-    * **Cons**:
-        * **Interference**: Susceptible to interference from other wireless devices, electronic signals, and physical obstacles (walls, furniture).
-        * **Reduced Speed**: Speed can degrade significantly with distance from the access point and through obstacles.
-        * **Environmental Factors**: Performance can be affected by weather, surrounding structures, and even the number of connected devices.
-        * **Security Concerns**: Requires proper encryption to prevent unauthorized access.
-
-## 🏢 Internet Connectivity in a Multi-Floor Building
-
-Let's consider a practical scenario: connecting a three-floor building to the internet.
-
-### ❌ Suboptimal Approach: Single Router
-
-Using a single Wi-Fi router on the ground floor to cover all three floors:
-
-Okay, I will provide the content in Markdown format, as requested. You can copy and paste this directly into your readme.md file. I'll use common Markdown syntax for headings, lists, bold text, code blocks (for diagrams), and emojis for visual appeal.
-Markdown
 
 # 🔗 Wired and Wireless Connections
 
@@ -157,12 +129,15 @@ Let's consider a practical scenario: connecting a three-floor building to the in
 
 Using a single Wi-Fi router on the ground floor to cover all three floors:
 
+```plaintext
+
 [Internet] -- (Wired) -- [Ground Floor Router]
 |
 +-- (Wireless) -- [1st Floor Devices]
 |
 +-- (Wireless) -- [2nd Floor Devices]
 
+```
 
 **Issues**:
 * **Signal Degradation**: Wi-Fi signals weaken significantly with distance and when passing through floors and walls.
@@ -173,12 +148,15 @@ Using a single Wi-Fi router on the ground floor to cover all three floors:
 
 A more robust solution involves a router on each floor, connected via wired connections to a central point (often the main router or a switch) on the ground floor.
 
+```plaintext
+
 [Internet] -- (Wired) -- [Ground Floor Main Router]
 |
 +-- (Wired) -- [1st Floor Router] -- (Wireless) -- [1st Floor Devices]
 |
 +-- (Wired) -- [2nd Floor Router] -- (Wireless) -- [2nd Floor Devices] 
 
+```
 **Benefits**:
 * **Stable Connection**: Each floor has a dedicated Wi-Fi access point, ensuring strong and stable wireless signals.
 * **Consistent Speed**: Devices on each floor receive optimal speeds due to proximity to their respective routers.
