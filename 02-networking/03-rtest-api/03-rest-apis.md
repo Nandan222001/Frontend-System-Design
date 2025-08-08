@@ -56,6 +56,11 @@ A **REST API** is a set of rules and conventions for building and interacting wi
 
 ---
 
+URL :- 
+
+![Mailchimp REST API Diagram](https://mailchimp.com/ctf/images/yzco4xsimv0y/7yArd1lnzrkrKPq4BvYDTE/aafd59d3a650981e25496f4e0429f34d/MailChimp_Blog_Post_-17_graphic_-3-01.png?w=980&q=70)
+
+
 ## 🧪 Building and Testing Apps
 
 - 🧰 **Postman** – Test REST APIs with GUI interface  
